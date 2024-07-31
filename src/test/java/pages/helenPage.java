@@ -35,7 +35,7 @@ public class helenPage {
     @FindBy(xpath = "//input[@name=\"lastName\"]")
     public WebElement lastNameInput;
 
-    @FindBy(xpath = "//input[@name=\"phoneNumber\"]")
+    @FindBy(xpath = "//input[@label=\"Phone number\"]")
     public WebElement phoneNumberInput;
 
     @FindBy(xpath = "//input[@name=\"email\"]")
@@ -47,11 +47,14 @@ public class helenPage {
     @FindBy(xpath = "//div[@aria-haspopup=\"listbox\"]")
     public WebElement chooseCourseInput;
 
-    @FindBy(xpath ="(//input[@type=\"checkbox\"])[4]")
+    @FindBy(xpath ="(//input[@type=\"checkbox\"])[6]")
     public WebElement testCourse;
 
     @FindBy(xpath = "//button[text()=\"Add\"]")
     public WebElement addButton;
+
+    @FindBy(xpath = "//table/tbody/tr/td[2]")
+    public WebElement verifytable;
 
 
     public void verifyMethod(String name ){
@@ -67,7 +70,7 @@ public class helenPage {
     @FindBy(xpath = "//a[@href=\"/admin/announcements\"]")
     public WebElement Announcement;
 
-    @FindBy(xpath = "(//button[starts-with(@class,\"MuiButtonBase-root\")]//child::span)[1]")
+    @FindBy(xpath = "//button[@class=\"MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-79mk38\"]")
     public WebElement addAnnouncement;
 
     @FindBy(xpath = "//textarea[@type=\"text\"]")
