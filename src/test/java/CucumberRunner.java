@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
         plugin={"html:target/cucumberReport.html","json: target/testReport.json"},
         features = "C:\\Users\\helen\\OneDrive\\Desktop\\Batch 6\\CucumberProject\\src\\test\\resources\\featuers",
         glue = "step_definitions",
-        tags = "@signup",
+        tags = "@addteacher",
         dryRun = false
 )
 
