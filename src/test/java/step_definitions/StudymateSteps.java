@@ -34,5 +34,9 @@ public class StudymateSteps {
         helenPage.teachers.click();
 
     }
+    @Then("user clicks on add teacher")
+    public void user_clicks_on_add_teacher() {
+        helenPage.addTeachersButton.click();
+    }
 
 }

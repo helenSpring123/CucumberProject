@@ -7,6 +7,8 @@ Feature: studymate functinalities
     @addteacher
     Scenario: add teacher functionality
       And user clicks on teachers
+      Then user clicks on add teacher
+
 
 
 
