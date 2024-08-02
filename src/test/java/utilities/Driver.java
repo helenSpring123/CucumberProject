@@ -40,6 +40,11 @@ public class Driver {
             driver.manage().window().maximize();
         }
         return driver;
-
+    }
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
     }
 }
