@@ -91,6 +91,24 @@ public class helenPage {
     @FindBy(xpath = "//button[text()=\"Cancel\"]")
     public WebElement cancelButton;
 
+    @FindBy(xpath = "(//button[@class=\"MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk\"])[1]")
+    public WebElement threeDots;
+
+    @FindBy(xpath = "(//li[@class=\"MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-l5jx0u\"])[3]")
+    public WebElement delete;
+
+    @FindBy(xpath = "//p[text()=\"Are you sure you want to delete announcement?\"]")
+    public WebElement message;
+
+    @FindBy(xpath = "//button[text()=\"Delete\"]")
+    public WebElement deleteButton;
+
+
+
+
+
+
+
 
 
 

@@ -152,6 +152,31 @@ public class StudymateSteps {
         Driver.quitDriver();
     }
 
+    @Then("user clicks on the three dots of the announcement box")
+    public void user_clicks_on_the_three_dots_of_the_announcement_box() {
+        helenPage.threeDots.click();
+    }
+    @Then("user selects Delete")
+    public void user_selects_delete() {
+        helenPage.delete.click();
+    }
+    @Then("user verifies a message {string}")
+    public void user_verifies_a_message(String message) {
+       Assert.assertTrue(helenPage.message.getText().contains(message));
+    }
+    @Then("user clicks on delete button")
+    public void user_clicks_on_delete_button() {
+        helenPage.deleteButton.click();
+    }
+
+
+
+
+
+
+
+
+
 
 
 
