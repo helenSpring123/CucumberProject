@@ -15,12 +15,13 @@ Feature: studymate functinalities
       And user clicks on phonenumber
       And user enters phonenumber "5558889999"
       Then user enters email "mary.doe@gmail.com"
-      Then user enters specilization "math"
+      Then user enters specilization "Teacher"
       And user clicks on  choose course
       Then user clicks on test
       And user clicks on add
       Then user verifies the teacher info
       Then user close window
+
 
       @negativeaddteacher
       Scenario: add teacher with missing info
@@ -32,12 +33,13 @@ Feature: studymate functinalities
         And user clicks on phonenumber
         And user enters phonenumber "5558889999"
         Then user enters incorrect email "mary.doe"
-        Then user enters specilization "math"
+        Then user enters specilization "Teacher"
         And user clicks on  choose course
         Then user clicks on test
         And user is not able to add info
         Then user clicks on cancle button
         Then user close window
+
 
         @addannouncementpositive
         Scenario: add an announcement
@@ -52,6 +54,7 @@ Feature: studymate functinalities
           Then user sees the announcemnts displayed
           Then user close window
 
+
           @negativeaddannouncement
           Scenario: add an announcement with no text
 
@@ -63,6 +66,35 @@ Feature: studymate functinalities
             Then user clicks on test option
             Then user is not able to click on add
             Then user close window
+
+
+            @DeleteAnnouncement
+            Scenario: delete an announcement
+
+              When  user clicks on announcements
+              Then user clicks on the three dots of the announcement box
+              And user selects Delete
+              Then user verifies a message "Are you sure you want to delete announcement?"
+              And user clicks on delete button
+              Then user close window
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
