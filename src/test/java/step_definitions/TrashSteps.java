@@ -3,6 +3,8 @@ package step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.TrashPage;
@@ -14,8 +16,14 @@ public class TrashSteps {
     WebDriver driver = Driver.getDriver();
     loginPage loginPage = new loginPage();
     TrashPage trashPage = new TrashPage();
+    private static final Logger logger = LogManager.getLogger(TrashPage.class);
     @Given("the user is on {string}")
     public void the_user_is_on(String url){driver.get(url);
+
+        logger.info("User is going to " + url);
+        driver.get(url);
+        logger.info("User successfully landed on the page" + driver.getTitle());
+
 
     }
     @When("user enter the username {string} and password {string} and language {string}")
@@ -30,6 +38,7 @@ public class TrashSteps {
     @When("user go to trash")
     public void user_go_to_trash() {
         trashPage.trashButton.click();
+
 
 
     }
