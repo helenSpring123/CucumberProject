@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
             features = "/Users/daiyrisaev/Desktop/batch6/CucumberProject/src/test/resources/features ",
             glue = "step_definitions",
             tags = "@positiveTrash",
+
             dryRun = false
 
     )
